@@ -199,131 +199,6 @@ Write-host "    Welcome!" -ForegroundColor cyan
 
     }
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     ElseIf ($answera -eq "Jeff")
     {
     cls
@@ -331,7 +206,7 @@ Write-host "    Welcome!" -ForegroundColor cyan
     Do
     {
    cls
-  $maxchoices = Read-host "What would you like to do. Crime?(C). Check inventory?(I) Check bank?(B) Shop?(S)"  
+  $maxchoices = Read-host "What would you like to do. Crime?(C) Check inventory?(I) Check bank?(B) Shop?(S)"  
 
   If ($maxchoices -eq "C") 
   {
@@ -1194,6 +1069,7 @@ Drill purchased" -ForegroundColor Magenta
            Write-host "Not enough money"
            }
     }
+    }
 
     If ($blacketmarketchoice -eq "G")
 {
@@ -1222,6 +1098,7 @@ cls
 Write-host "Come back if you change your mind" 
 Start-Sleep -s 2
 }
+
 }
 Else
 {
@@ -1234,7 +1111,8 @@ Start-Sleep -s 2
   
   }
   
-  ElseIf ($maxchoices -eq "B")
+  ElseIf ($maxchoices -eq "B") 
+
   {
   cls
   Start-Sleep -s 2
@@ -1247,11 +1125,12 @@ Start-Sleep -s 2
   cls
   Start-Sleep -s 2
   Write-host "
-  Invalid entry" ForegroundColor Red
+  Invalid entry " -ForegroundColor Red
+  Read-host "..."
   start-sleep -s 2
   }
     }
-    }
+    
     Until($Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $Gun -eq "True")
 
 
@@ -1720,6 +1599,3 @@ Stop-Process -name powershell_ise
                       Else
                                           {
                                             Write-host "So you dont want to play? Your loss"
-                                          }
-     
- 
