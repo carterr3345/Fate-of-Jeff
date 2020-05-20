@@ -1,0 +1,1725 @@
+cls
+$balance = 500
+$bluprints = "False"
+$Weapon = "False"
+$Knife = "False"
+$drill = "False"
+$Id = "False"
+$var5 = "False"
+$drillpurchase = 500
+$gunpurchase = 500
+$carter = "cool"
+cls 
+
+
+Write-host "    Welcome!" -ForegroundColor cyan
+                        
+[Console]::Beep(1000,500)
+[Console]::Beep(500,500)
+[Console]::Beep(500,500)
+[Console]::Beep(500,500)
+[Console]::Beep(750,500)
+[Console]::Beep(1000,500)
+[Console]::Beep(750,500)
+[Console]::Beep(500,500)
+  
+    $answera = write-host "
+    
+    Would you like to play as Troy or Jeff (Troy/Jeff)?" -ForegroundColor Yellow
+
+  
+  $answera = read-host "
+ 
+
+       ______________
+      ||            || 
+      ||            ||           ================\
+      ||            ||           |----------||@  \\   ___
+      ||            ||           |____|_____|||_/_\\_|___|_
+      ||____________||          <|  ___\    ||     | ____  |
+      |______________|          <| /    |___||_____|/    | |
+       \\############\\         ||/  O  |__________/  O  |_||
+        \\############\\          \___/             \___/
+         \      ____    \   
+          \_____\___\____\
+
+                 Troy                       Jeff
+    " 
+   
+   [Console]::Beep(500,500)
+   [Console]::Beep(750,500)
+
+    If ($answera -eq "Troy" )
+    {
+    cls
+       Write-host "The story begins with Troy, a young man who loves tech and is currently in university"
+
+       start-sleep -s 7
+       Do 
+       {
+       cls
+
+       $troysfirstq = read-host "Would you like to do this afternoon, Go look at the stars or talk with girlfriend (S/G)? 
+
+ *    .  *       .   ,          *
+           .       . .        *
+ *   .   .'    * ,      .       .  ,     *
+   .     *     .'
+   '     .     .  *        *  .'.
+       .   ' '        .    .    '   .
+.  *        ,   *               '      *
+                             .
+         *          .   *
+
+
+                  .
+                 ( \
+                 \  .     (___ \
+                  \( \     .  c 
+                   \  .     _  /
+                    \( \ m/  _\\__            ____   
+                     \  V/\`\ ++ /|          /  __\     
+                      \( \ \ \__/ |          \( oo         (___ \ 
+                     o/\_Z  \_____)          _\_o/          oo~)/
+                     /=\.   .~~~~~|           \|/ \         \-_/_/+
+                    // \\   |_____|        / / __\ \___    / \|/  \
+                   //   \\  | | | |        \ \|   |__/_)  / / .- \ \
+                  //     \\ | | | |         \/_)  |       \ \ .  /_/
+                 //      .\\( | ( |          ||___|        \/___(_/
+                //         \\ | | |           | | |          | |  |
+               //          .\\| | |           | | |          | |  |
+              //           _|\\_| |           |_|_|          |_|__|
+            .//               \\              [__)_)        (_(___]                      
+  
+
+
+   
+ 
+   
+           
+    "
+    If ($troysfirstq -eq "S")
+    {
+    cls
+    write-host "
+    *    .  *       .   ,          *
+           .       . .        *
+ *   .   .'    * ,      .       .  ,     *
+   .     *     .'
+   '     .     .  *        *  .'.
+       .   ' '        .    .    '   .
+.  *        ,   *               '      *
+                             .
+         *          .   *
+
+
+                  .
+                 ( \
+                 \  .     (___ \
+                  \( \     .  c 
+                   \  .     _  /
+                    \( \ m/  _\\__             
+                     \  V/\`\ ++ /|             
+                      \( \ \ \__/ |          
+                     o/\_Z  \_____)           
+                     /=\.   .~~~~~|            
+                    // \\   |_____|         
+                   //   \\  | | | |         
+                  //     \\ | | | |         
+                 //      .\\( | ( |           
+                //         \\ | | |           
+               //          .\\| | |           
+              //           _|\\_| |            
+            .//               \\ 
+    "
+    start-sleep -s 2
+    cls
+    write-host "
+     .              +   .                .   . .     .  .
+                   .            .       .       .     *
+  .       *                        . . . .  .   .  + .
+                        .   .  +  . . .
+.               .              .  .   .    .    . .
+                 *            .     .     . +.    +  .
+     *                   +        .       .   . .
+        . .                ^  .    * . . .  .  +   .
+           +      .       { }    .   .      +
+              .         . { }.       . +  .+. .    .
+  .                      ./_\   . + .  . .     .      .
+           .      .    .     . .   . . .        
+      *             .    . .  +    .  .         *
+          .     .    .  +   . .  *  .       +     .
+               . + .  .  .  .. +  .
+.      .  .  .  *   .  *  . +..  .            *
+ .      .   . .   .   .   . .  +   .    .      .      +
+ "
+  start-sleep -s 2
+  write-host "Woah whats that?"
+  start-sleep -s 2
+  cls
+  write-host "ZZZzzzZZZzzz"
+   start-sleep -s 1
+   cls
+   write-host "Oh no! my Celestron CPC 1100 StarBright XLT GPS Schmidt Cassegrain 2800mm Telescope detected a incoming radiowave from that ship."
+    start-sleep -s 1
+    read-host "ZZZzzz4566zzzZZZ"
+    start-sleep -s 5 
+    write-host "huh weird?"
+     }
+      
+    Else
+    {
+    read-host "
+    
+                
+          ____   
+         /  __\     
+         \( oo         (___ \ 
+         _\_o/          oo~)/
+          \|/ \         \-_/_/+
+       / / __\ \___    / \|/  \
+       \ \|   |__/_)  / / .- \ \
+        \/_)  |       \ \ .  /_/
+         ||___|        \/___(_/
+         | | |          | |  |
+         | | |          | |  |
+         |_|_|          |_|__|
+         [__)_)        (_(___]
+            "      
+      start-sleep -s 1                       
+      read-host "Hey troy!"                
+                            
+    }
+
+
+
+    
+
+    } Until($var5 -eq "True")
+
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ElseIf ($answera -eq "Jeff")
+    {
+    cls
+    read-Host "The story contuines with Jeff, A citezen thought to have died 5 years ago. Jeff's real identity is unknowed and he has been hiding in secret for years, and is apart of the intense moscow mofia"                  
+    Do
+    {
+   cls
+  $maxchoices = Read-host "What would you like to do. Crime?(C). Check inventory?(I) Check bank?(B) Shop?(S)"  
+
+  If ($maxchoices -eq "C") 
+  {
+
+  
+cls
+
+read-Host "What shall we do boys? -Jeff"
+
+$nathan = Get-Random -Minimum 1 -Maximum 4
+
+
+
+       If ($nathan -eq "1") 
+       {
+       Write-host "Lets do a heist -Gang"
+       
+         Start-Sleep -s 3
+        
+        
+cls
+read-Host "Hey boys, lets rob a bank!"
+cls
+
+If ($weapon -eq "false") 
+{ 
+write-host "Jeff you need a gun what are you doing???"
+Start-Sleep -s 3
+}
+
+Else
+{
+write-host "
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+
+Give me all your money"
+start-sleep -s 3
+write-host "
+You made 500"
+
+start-sleep -s 2
+
+cls
+
+$firstchoice = read-host "Would you like to keep going? (Y/N)"
+
+If ($firstchoice -eq "Y")
+{
+
+ $dddbankdicerolled = Get-Random -Minimum 1 -Maximum 5 
+
+       If ($dddbankdicerolled -eq "1") 
+       {
+         Start-Sleep -s 2
+    
+     write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   "
+   
+   Start-Sleep -s 4
+   cls
+
+
+         Write-host "
+                 
+                       _____________________
+    /  .       .      (<$$$$$$>#####<::::::>)
+   .      .     .  _/~~~~~~~~~~~~~~~~~~~~~~~~~\_   .       .   .   \
+.(          . .  /~                             ~\ . .   .
+  ( . .        .~                                 ~.      .         )
+           ()\/_____                           _____\/()   .    .  ).
+(         .-''      ~~~~~~~~~~~~~~~~~~~~~~~~~~~     ``-.  ...
+.  . . .-~              __________________              ~-.  .    /
+ .   ..`~~/~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~\~~'    . ) .
+    . .| | | #### #### || | | | [] | | | || #### #### | | | .
+   (   ;__\|___________|++++++++++++++++++|___________|/__;.   .
+     .  (~~====___________________________________====~~~)
+ ( .  .. \------_____________[ POLICE ]__________-------/ ..  .     )
+         .  |      ||         ~~~~~~~~       ||      |
+             \_____/                          \_____/
+               
+
+
+                           
+                           Cops arrived
+                            GAME OVER
+
+         "           
+            Start-Sleep -s 8
+            Stop-Process -name powershell_ise                    
+        }
+
+Else
+{
+Start-Sleep -s 2
+ write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   "
+   Start-Sleep -s 2
+   write-host "you made 1000"
+   Start-Sleep -s 2
+   cls
+   $secondchoice = read-host "Would you like to keep going? (Y/N)"
+   If ($secondchoice -eq "Y")
+   {
+
+    $chobankdicerolled = Get-Random -Minimum 1 -Maximum 3 
+
+       If ($chobankdicerolled -eq "1") 
+       {
+         Start-Sleep -s 2
+    
+     write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   "
+   
+   Start-Sleep -s 4
+   cls
+
+
+         Write-host "
+                 
+                       _____________________
+    /  .       .      (<$$$$$$>#####<::::::>)
+   .      .     .  _/~~~~~~~~~~~~~~~~~~~~~~~~~\_   .       .   .   \
+.(          . .  /~                             ~\ . .   .
+  ( . .        .~                                 ~.      .         )
+           ()\/_____                           _____\/()   .    .  ).
+(         .-''      ~~~~~~~~~~~~~~~~~~~~~~~~~~~     ``-.  ...
+.  . . .-~              __________________              ~-.  .    /
+ .   ..`~~/~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~\~~'    . ) .
+    . .| | | #### #### || | | | [] | | | || #### #### | | | .
+   (   ;__\|___________|++++++++++++++++++|___________|/__;.   .
+     .  (~~====___________________________________====~~~)
+ ( .  .. \------_____________[ POLICE ]__________-------/ ..  .     )
+         .  |      ||         ~~~~~~~~       ||      |
+             \_____/                          \_____/
+               
+
+
+                           
+                           Cops arrived
+                            GAME OVER
+
+         "           
+            Start-Sleep -s 8
+            Stop-Process -name powershell_ise                    
+        }
+
+Else
+{
+Start-Sleep -s 2
+cls
+ write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   " 
+   Start-Sleep -s 2
+   write-host "you made 1500"
+   $thirdchoice = read-host "Would you like to keep going? (Y/N)"
+
+   If ($thirdchoice -eq "Y")
+   {
+   $lastbankdicerolled = Get-Random -Minimum 1 -Maximum 3 
+
+       If ($lastbankdicerolled -eq "1") 
+       {
+         Start-Sleep -s 2
+    
+     write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   "
+   
+   Start-Sleep -s 4
+   cls
+
+
+         Write-host "
+                 
+                       _____________________
+    /  .       .      (<$$$$$$>#####<::::::>)
+   .      .     .  _/~~~~~~~~~~~~~~~~~~~~~~~~~\_   .       .   .   \
+.(          . .  /~                             ~\ . .   .
+  ( . .        .~                                 ~.      .         )
+           ()\/_____                           _____\/()   .    .  ).
+(         .-''      ~~~~~~~~~~~~~~~~~~~~~~~~~~~     ``-.  ...
+.  . . .-~              __________________              ~-.  .    /
+ .   ..`~~/~~~~~~~~~~~~TTTTTTTTTTTTTTTTTTTT~~~~~~~~~~~~\~~'    . ) .
+    . .| | | #### #### || | | | [] | | | || #### #### | | | .
+   (   ;__\|___________|++++++++++++++++++|___________|/__;.   .
+     .  (~~====___________________________________====~~~)
+ ( .  .. \------_____________[ POLICE ]__________-------/ ..  .     )
+         .  |      ||         ~~~~~~~~       ||      |
+             \_____/                          \_____/
+               
+
+
+                           
+                           Cops arrived
+                            GAME OVER
+
+         "           
+            Start-Sleep -s 8
+            Stop-Process -name powershell_ise                    
+        }
+
+else
+{
+ Start-Sleep -s 2
+ cls
+ write-host "
+
+   
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+   
+   Keep going! 
+   "
+   Start-Sleep -s 2
+   write-host "you made 3000, heist ended"
+    $balance = $balance + 3000
+        Write-host "$ $balance" -ForegroundColor Yellow
+       Write-host "You made it out safe" 
+   }
+   }
+   else
+   {
+    $balance = $balance + 1500
+        Write-host "$ $balance" -ForegroundColor Yellow
+       Write-host "You made it out safe"  
+   }
+   }
+   }
+   else
+   {
+    $balance = $balance + 1000
+        Write-host "$ $balance" -ForegroundColor Yellow
+       Write-host "You made it out safe"  
+   }
+   }
+   }
+   else
+   {
+    $balance = $balance + 500
+           Write-host "$ $balance" -ForegroundColor Yellow
+           Write-host "You made it out safe"  
+   }
+}
+       }
+
+
+       ElseIf ($nathan -eq "2")
+       { 
+       Write-host "Lets steal from a conveience store -Gang"
+     Start-Sleep -s 3
+        cls
+
+Write-host "Give me all your money!" 
+Start-sleep -s 2
+
+
+If ($wepond -eq "True")
+{
+Read-host "
+
+     ----.
+    |   _}
+    |@   >
+    |\   7
+    / `-- _         ,-------,****
+ ~    >o<  \---------o{___}-
+/  |  \  /  ________/8'
+|  |       /         
+|  /      |
+
+"
+Write-host "Here take it -Gas station lady"
+Start-sleep -s 2
+$balance = $balance + 200
+Write-host "$ $balance" -ForegroundColor Yellow
+Write-host "You made it out safe"  
+}
+ElseIf ($knife -eq "True")
+{
+
+Read-host "
+     ----.
+    |   _}          :\
+    |@   >          :|
+    |\   7          :|
+    / `-- _         ;|
+ ~    >o<  \-------{8|     
+/  |  \  /  _______{8|     
+|  |       /         
+|  /      |
+"
+Start-sleep -s 2
+Write-host "Here take it -Gas station lady "
+$balance = $balance + 50
+Write-host "$ $balance" -ForegroundColor Yellow
+Start-sleep -s 2
+Write-host "You made it out safe"  
+}
+Else
+{
+read-host "
+     ----.
+    |   _}         
+    |@   >          
+    |\   7          
+    / `-- _        
+ ~    >o<  \
+/  |  \  /  |   
+|  |       /       
+|  /      |
+
+
+"
+Start-sleep -s 2
+write-host "Umm no -Gas station lady"
+Start-sleep -s 2
+}
+       }
+
+
+
+       Else
+
+       {
+       write-host "Lets rob a house -Gang"
+       Start-sleep -s 3
+        
+cls
+
+write-host  "  
+     
+                     
+                  ( 
+                    )
+                 (            ./\.
+              |^^^^^^^^^|   ./LLLL\.
+              |''.' .'''| ./LLLLLLLL\.
+              |.' '.''.'|/LLLL/^^\LLLL\.
+              |.'.''''./LLLL/^ () ^\LLLL\.
+              |.''.'./LLLL/^  =   = ^\LLLL\.
+              |.'../LLLL/^  _.----._  ^\LLLL\.
+              |'./LLLL/^ =.' ______ `.  ^\LLLL\.
+              |/LLLL/^   /|--.----.--|\ = ^\LLLL\.
+            ./LLLL/^  = |=|__|____|__|=|    ^\LLLL\.
+          ./LLLL/^=     |*|~~|~~~~|~~|*|   =  ^\LLLL\.
+        ./LLLL/^        |=|--|----|--|=|        ^\LLLL\.
+      ./LLLL/^      =   `-|__|____|__|-' =        ^\LLLL\.
+     /LLLL/^   =         `------------'        =    ^\LLLL\
+     ~~|.~       =        =      =          =         ~.|~~
+       ||     =      =      = ____     =         =     ||
+       ||  =               .-'    '-.        =         ||
+       ||     _..._ =    .'  .-()-.  '.  =   _..._  =  ||
+       || = .'_____'.   /___:______:___\   .'_____'.   ||
+       || .-|---.---|-.   ||  _  _  ||   .-|---.---|-. ||
+       || |=|   |   |=|   || | || | ||   |=|   |   |=| ||
+       || |=|___|___|=|=  || | || | ||=  |=|___|___|=| ||
+       || |=|~~~|~~~|=|   || | || | ||   |=|~~~|~~~|=| ||
+       || |*|   |   |*|   || | || | ||  =|*|   |   |*| ||
+       || |=|---|---|=| = || | || | ||   |=|---|---|=| ||
+       || |=|   |   |=|   || | || | ||   |=|   |   |=| ||
+       || '-|___|___|-'   ||o|_||_| ||   '-|___|___|-' ||
+       ||  '---------' =  ||  _  _  || =  '---------', ||
+       || =   =           || | || | ||      =     =    ||
+       ||  %@&   &@  =    || |_||_| ||  =   @&@   %@ = ||
+       || %@&@% @%@&@    _||________||_   &@%&@ %&@&@  ||
+       ||,,\\V//\\V//, _|___|------|___|_ ,\\V//\\V//,,||
+       |--------------|____/--------\____|--------------|
+      /- _  -  _   - _ -  _ - - _ - _ _ - _  _-  - _ - _ \
+     /____________________________________________________\
+
+
+
+
+     " 
+     
+    $jeffsrobbery = read-host  "Let's make this quick"
+
+    If ($jeffsrobbery ="Y") 
+    {
+    
+    "
+ _____________________________________________
+|.'',                                     ,''.|
+|.'.'',                                 ,''.'.|
+|.'.'.'',                             ,''.'.'.|
+|.'.'.'.'',                         ,''.'.'.'.|
+|.'.'.'.'.|                         |.'.'.'.'.|
+|.'.'.'.'.|===;                 ;===|.'.'.'.'.|
+|.'.'.'.'.|:::|',             ,'|:::|.'.'.'.'.|
+|.'.'.'.'.|---|'.|, _______ ,|.'|---|.'.'.'.'.|
+|.'.'.'.'.|:::|'.|'|'''''''|'|.'|:::|.'.'.'.'.|
+|,',',',',|---|',|'|'''''''|'|,'|---|,',',',',|
+|.'.'.'.'.|:::|'.|'|'''''''|'|.'|:::|.'.'.'.'.|
+|.'.'.'.'.|---|','   /%%%\   ','|---|.'.'.'.'.|
+|.'.'.'.'.|===:'    /%%%%%\    ':===|.'.'.'.'.|
+|.'.'.'.'.|%%%%%%%%%%%%%%%%%%%%%%%%%|.'.'.'.'.|
+|.'.'.'.','       /%%%%%%%%%\       ','.'.'.'.|
+|.'.'.','        /%%%%%%%%%%%\        ','.'.'.|
+|.'.','         /%%%%%%%%%%%%%\         ','.'.|
+|.','          /%%%%%%%%%%%%%%%\          ','.|
+|;____________/%%%%%%%%%%%%%%%%%\____________;|
+"
+
+Write-host "After Mike, the bruiser of the gang breaks open the door you finally get inside and only to realize a silent alarm was triggered on entry, Be quick or you wont make out in time. You see a serious of rooms on the first floor"
+$Roomchoice = read-host "Where would you like to go first? keep in mind time is already running out. Office(O), Livingroom(L), Kitchen(K)" 
+   
+   If ($Roomchoice -eq "O")
+   {
+   cls
+  write-host "You walk into the office"
+  Start-Sleep -s 3
+   cls
+   write-host "
+                   ________________  _______________
+                 .'               .'               .|
+               .'               .'               .' |
+             .'_______________.'______________ .'   |
+             | ___ _____ ___ || ___ _____ ___ |     |
+             ||_=_|__=__|_=_||||_=_|__=__|_=_||     |
+      _______||_____===_____||||_____===_____||     |
+    .'       ||_____===_____||||_____===_____||    .|
+  .'         ||_____===_____||||_____===_____||  .' |
+.'___________|_______________||_______________|.'   |
+|.----------.|.-----___-----.||.-----___-----.|     |
+|]          |||_____________||||_____________||     |
+||          ||.-----___-----.||.-----___-----.|     |
+||          |||_____________||||_____________||     |
+||          ||.-----___-----.||.-----___-----.|     |
+|]         o|||_____________||||_____________||     |
+||          ||.-----___-----.||.-----___-----.|     |
+||          |||             ||||_____________||     |
+||          |||             |||.-----___-----.|    .'
+|]          |||             ||||             ||  .'o)
+||__________|||_____________||||_____________||.'
+''----------'''------------------------------''
+            (o)                         (o)
+   
+  
+  
+   "
+   $Filingcabinet = Read-Host "you see a filing cabinet in the office, would you like to search? (Y/N)"
+   
+   If ($Filingcabinet -eq "Y")
+   {
+   write-host "Congratulations! You found secret Goverment Blueprints" -ForegroundColor Magenta
+   $Blueprints = "True"
+   start-sleep -s 4
+   }
+   Else
+   {
+   write-host "Leaving office"
+   Start-Sleep -s 3
+   cls
+   }
+   
+
+
+   }
+    ElseIf ($Roomchoice -eq "K")
+   {
+   cls
+   write-host "You walk into the kitchen"
+   Start-Sleep -s 3
+   
+   
+   
+   cls
+    Read-Host "
+_____________________________________________________
+____________________________________________________\\
+|.-------.-------.|_.----._.----._|.-------.-------.\\\
+|]       |       [|       .       |]       |       [ \\\
+||       |       ||     .':'.     ||       |       |  |\\
+||       |       ||    .' : '.    ||       |       |  |\\\
+||     (O|O)     ||   .'  :  '.   ||     (O|O)     |  | \\\
+||       |       ||  .'===:==='.  ||       |       | O|  |\\
+||       |       ||=='    :    '==||       |       |  |  |\\\
+|]       |       [|  )    :    (  |]       |       [  |O | \\\
+||_______|_______||"" ____:_____""||_______|_______|  |  |  |\\
+'-----------------'_______________'----------------'  |  |  |\\\
+|.--------.  |    '---------------'  (o)______)(0)  \ |  |  | \\\
+||        |::|_________________________________())___\|  | O|  \\\______
+||        |::|-----______*!*______-------------))( .'.\  |  |   | _____ |
+||________|::|  _ /       '       \  _        _   (__.'\ |  |O  ||     ||
+|____________| _  \_______________/     _           (_.'\|  |   ||  _  ||
+ ___________________________________________      _  (___\  |   ||     ||
+||.-----.|.------.|.-.-.--.--.-.-.||.-----.||\   _        \ |   ||     ||
+||| === ||| ==== ||| | |  |  | | |||| === ||| \     _      \|   ||    _||
+||'-----'|'------'|'-'-'--'--'-'-'||'-----'||. \          _ \   ||     ||
+||.-----.|.------.|.------.------.||.-----.|| `|\       _    \  || _   ||
+||| === |||      |||      |      |||| === |||\ | \  _         \ ||_____||
+||'-----'|]      ||]      |      [||'-----'|| \|. \        _   \|_______|
+||.-----.||    (O|||    (O|O)    |||.-----.||  | `|\                   ||
+||| === |||      |||      |      |||| === |||  |\ | \__________________||
+|||     ||]      ||]      |      [|||     ||| O| \|. |  _____________  ||
+||'-----'||______|||______|______|||'-----'||  |  | `| |             | ||
+||_______|________|_______________||_______||  |O |\ | |   _         | ||
+''-----------------------------------------' \ |  | \| |          _  | ||
+   ____                 _______               \|  |  | |       _     | ||
+           _________                  ______   \  |O | |             | ||
+                                                \ |  | |   _      _  | ||
+                                _________        \|  | |             | ||
+      ___________        __                       \  | | _        _  | ||
+    __                              _________      \ | |_____________| ||
+               ___________                          \|_________________||
+    "
+
+    $Grabknife = Read-host "Would you like to grab a knife? (Y/N)?"
+     If ($Grabknife -eq "Y")
+   {
+   Write-Host "Congratulations! You found a knife" -ForegroundColor Magenta
+   $Knife = "True"
+   start-sleep -s 4
+   }
+   Else
+   {read-host "Leaving kitchen"
+   Start-Sleep -s 3
+   cls
+   }
+   }
+   Else 
+   {
+   cls
+   write-host "You walk into the living room"
+    Start-Sleep -s 3
+    Write-host "
+
+                        /    \
+                       /______\
+                          ||
+           /~~~~~~~~\     ||    /~~~~~~~~~~~~~~~~\
+          /~ () ()  ~\    ||   /~ ()  ()  () ()  ~\
+         (_)========(_)   ||  (_)================(_)
+         I|__________|I  _||_  |__________________|
+
+    "
+
+    $serchcouch = Read-host "Would you like to search the couch? (Y/N)?"
+     If ($serchcouch -eq "Y")
+   {
+   write-host "Congratulations! You found someones ID card" -ForegroundColor Magenta
+   $Id = "True"
+   start-sleep -s 2
+   }
+   Else
+   {read-host "Leaving kitchen"
+   Start-Sleep -s 3
+   cls
+   }
+
+
+   }
+   
+   
+   
+   
+  
+  
+   
+    }
+     
+    Else
+    {
+
+    }
+    Write-host "
+    Times up we gotta go boys"
+    Start-Sleep -s 3 
+       }
+       
+
+
+  }
+
+  ElseIf ($maxchoices -eq "I")
+  {
+  
+  cls 
+If ($Weapond -eq "true")
+{
+
+
+
+ write-host "
+ 
+    
+   +--^----------,--------,-----,--------^-,
+   | |||||||||   `--------'     |          O
+   `+---------------------------^----------|
+     `\_,---------,---------,--------------'
+       / XXXXXX /'|       /'
+      / XXXXXX /  `\    /'
+     / XXXXXX /`-------'
+    / XXXXXX /
+   / XXXXXX /
+  (________(                
+   `------'  
+    
+  (Gun)
+
+
+    "
+
+
+
+}
+Else
+{
+
+}
+
+If ($Blueprints -eq "true")
+{
+ write-host "
+
+
+  .-=~=-.                                                                 .-=~=-.
+  (__  _)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(__  _)
+  ( _ __)                                                                 ( _ __)
+  (__  _)              |PROJECT КOCMOC|                                   (__  _)
+  (_ ___)               --------------                                    (_ ___)
+  (__  _)                                                                 (__  _)
+  ( _ __)            _   _                        ~~                      ( _ __)
+  (__  _)         .-( '.' )-.                     '.   ~                  (__  _)
+  (_ ___)        (   \ : /   )                                            (_ ___)
+  (__  _)       ( ''-.;;;.-'' )                                           (__  _)
+  ( _ __)      ( :-==;;;;;==-: )                                          ( _ __)
+  (__  _)       (  .-';;;'-.  )                                           (__  _)
+  (_ ___)        ('  / : \  ')                   3x12pldd5 engine         (_ ___)
+  (__  _)         '-(_.'._)-'                    ________                 (__  _)
+  ( _ __)        fuison reactor                 /========\                ( _ __)
+  (__  _)                                    __/__________\               (__  _)
+  (_ ___)                                   /              \              (_ ___)
+  (__  _)       ____________               /  =(*)=         \             (__  _)
+  ( _ __)      (__((__((___()             |_._._._._._._._._.|            ( _ __)
+  (__  _)     (__((__((___()()            / __________________ \          (__  _)
+  ( _ __)    (__((__((___()()()          | OOOOOOOOOOOOOOOOOOO0 |         ( _ __)
+  (__  _)                                                                 (__  _)
+  (_ ___)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(_ ___)
+  '-._.-'                                                                 '-._.-'
+
+  (Blue Prints)
+
+"
+}
+
+Else
+{
+
+}
+
+If ($drill -eq "true")
+{ write-host "
+
+
+       _____________
+ -----| | | |       |
+       \|_|_|___    |
+                |   |
+                |   |
+                |   |
+            ___/    |
+           |________| 
+
+   (Drill) 
+
+
+" 
+}
+Else
+{
+
+}
+
+
+If ($Knife -eq "true")
+{ write-host "
+
+
+ ___________________________________ ______________________
+ \                                  | (_)     (_)    (_)   \
+  `.                                |  __________________   }
+    `-..........................____|_(                  )_/
+
+ 
+   (Knife) 
+
+
+" 
+}
+
+Else
+{
+
+}
+
+
+If ($Id -eq "true")
+{
+
+ write-host "
+    _________________________________________________
+   !          !                                      !
+   ! ///-\\\  !           КOCMOC Лицензия            !
+   ! |^   ^|  !  имя:Luis_Bykov                      !
+   ! |O   O|  !  Цвет волос:коричневый               !
+   ! |  '  |  !  возраст:тридцать                    !
+   !  \ _ /   !  Высота: сто семьдесят три           !
+   !   | |    !  Цвет глаз:синий                     !
+   !          !  Департамент:безопасности советник   !
+   !          !  Лицензия# PRNDSL1234OD              !
+   !_________________________________________________!
+                   
+ 
+   (ID) 
+
+
+" 
+
+}
+
+Else
+
+{
+
+}
+
+read-host "..."
+  
+  }
+
+  ElseIf ($maxchoices -eq "S")
+  {
+  
+  cls
+
+Write-host "
+
+
+ //////\\\\\
+// /_\ /_\ \\
+\(  0 _ 0  )/
+/\\=  _\ =//\
+\\/\ --- /\//
+//\ '---' /\\
+\//       \\/
+/\\       //\
+\\/       \//
+              
+           
+What you looking at buying?"
+Start-Sleep -s 2
+$blacketmarketchoice = Read-host "
+
+We got a gun or a drill? (G/D) "
+cls
+
+If ($blacketmarketchoice -eq "D")
+{
+$drillpurchasequestion = Read-host "
+
+You want a drill for $ 500? (Y/N)"
+If ($drillpurchasequestion -eq "Y")
+{
+ If ($balance -gt 500)
+    {
+     
+     $balance = $balance - $drillpurchase
+     Write-host "
+Drill purchased" -ForegroundColor Magenta 
+     $Drill = "True"
+    }
+          else
+          {
+           Write-host "Not enough money"
+           }
+    }
+
+    If ($blacketmarketchoice -eq "G")
+{
+$Gunpurchasequestion = Read-host "
+
+You want a gun for $ 500? (Y/N)"
+If ($Gunpurchasequestion -eq "Y")
+{
+ If ($balance -gt 500)
+    {
+     
+     $balance = $balance - $Gunpurchase
+     Write-host "
+Gun purchased" -ForegroundColor Magenta 
+     $weapon = "True"
+    }
+          else
+          {
+           Write-host "Not enough money"
+           }
+    }
+Else
+{
+Start-Sleep -s 2
+cls
+Write-host "Come back if you change your mind" 
+Start-Sleep -s 2
+}
+}
+Else
+{
+Start-Sleep -s 2
+cls
+Write-host "Come back if you change your mind" 
+Start-Sleep -s 2
+
+}
+  
+  }
+  
+  ElseIf ($maxchoices -eq "B")
+  {
+  cls
+  Start-Sleep -s 2
+  write-host "$ $balance" -ForegroundColor Yellow
+  Start-Sleep -s 2
+  }
+
+  Else
+  {
+  cls
+  Start-Sleep -s 2
+  Write-host "
+  Invalid entry" ForegroundColor Red
+  start-sleep -s 2
+  }
+    }
+    }
+    Until($Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $Gun -eq "True")
+
+
+
+    cls
+    Start-Sleep -s 5
+     write-host "5 years later"
+     Start-Sleep -s 1
+     read-host "
+
+
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/  \
+                                                                                        |  \/  |                \\//     \\//\\//     \\//
+                                                                                        |/\/\/\|                 \/       \/  \/       \/
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .____ _. . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  ._.
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .__
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                             .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _____0_0_0_____           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .____     /     % % %  /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .____    /______ʌ ʌ ʌ__/   \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+
+
+ After all these years, here we are boys...
+
+
+
+
+
+ "
+ Start-Sleep -s 3
+ write-host "How accurate are those blueprints Jeff? -Martan"
+ Start-Sleep -s 1
+ read-host "200%, The weekest point is under the north orbital maneuvering engine We will strike at midnight, Hey marco pass the binoculars "
+ Start-Sleep -s 1
+ write-host "sure thing jeff"
+ Start-Sleep -s 3
+ cls
+ write-host "
+     
+  /\/\/\                            /  \
+ | \  / |                         /      \
+ |  \/  |                       /          \
+ |  /\  |----------------------|     /\     |
+ | /  \ |                      |    /  \    |
+ |/    \|                      |   /    \   |
+ |\    /|                      |  | (  ) |  |
+ | \  / |                      |  | (  ) |  |
+ |  \/  |                 /\   |  |      |  |   /\
+ |  /\  |                /  \  |  |      |  |  /  \
+ | /  \ |               |----| |  |      |  | |----|
+ |/    \|---------------|    | | /|   .  |\ | |    |
+ |\    /|               |    | /  |   .  |  \ |    |
+ | \  / |               |    /    |   .  |    \    |
+ |  \/  |               |  /      |   .  |      \  |
+ |  /\  |---------------|/        |   .  |        \|
+ | /  \ |               /  КOCMOC |   .  | КOCMOC  \
+ |/    \|              (          |      |          )
+ |\    /|               |    | |--|      |--| |    |
+ | \  / |----------------/  \-----/  \/  \-----/  \
+ |  \/  |                \\//     \\//\\//     \\//
+ |/\/\/\|                 \/       \/  \/       \/
+
+ "
+ read-host "Thats it alright..... "
+  Start-Sleep -s 10
+  write-host "
+  
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/  \
+                                                                                        |  \/  |                \\//     \\//\\//     \\//
+                                                                                        |/\/\/\|                 \/       \/  \/       \/
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .____ _. . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  ._.
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .__
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                             .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _____0_0_0_____           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._     /     % % %  /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._    /______ʌ ʌ ʌ__/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+"
+ Start-Sleep -s 2
+ cls
+  write-host " 
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/  \
+                                                                                        |  \/  |                \\//     \\//\\//     \\//
+                                                                                        |/\/\/\|                 \/       \/  \/       \/
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .____ _. . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  ._.
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .__
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                             .__        ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _.  0 0 0  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _.  % % %  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _.  ʌ ʌ ʌ  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _______________           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._     /            /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._    /____________/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+"
+Start-Sleep -s 2
+ cls
+  write-host "
+ 
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/  \
+                                                                                        |  \/  |                \\//     \\//\\//     \\//
+                                                                                        |/\/\/\|                 \/       \/  \/       \/
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .____ _. . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .         .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. . 
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .___   0 0 0    _ .  .____ . .  ._ .  .____ _. . .  ._ .  ._
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. % % % .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                                                             .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ʌ ʌ ʌ   .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _______________           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._     /            /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  ._.__    /____________/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+
+ "
+ Start-Sleep -s 2
+ cls
+  write-host " 
+
+
+
+
+
+ 
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/  \
+                                                                                        |  \/  |                \\//     \\//\\//     \\// 0 0 0
+                                                                                        |/\/\/\|                 \/       \/  \/       \/  % % %
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .__  _. ʌ ʌ ʌ . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  ._.
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _ 
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                             .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _______________           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._     /            /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._    /____________/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+"
+Start-Sleep -s 2
+Write-host "
+
+pss.. marco, pass the drill -Jeff"
+
+Start-Sleep -s 2
+
+Write-host "zzzzz zzzzz zzzzz"
+
+Start-Sleep -s 2
+ cls
+  write-host " 
+
+
+
+
+
+ 
+                                                                                         /\/\/\                            /  \
+                                                                                        | \  / |                         /      \
+                                                                                        |  \/  |                       /          \
+                                                                                        |  /\  |----------------------|     /\     |
+                                                                                        | /  \ |                      |    /  \    |
+                                                                                        |/    \|                      |   /    \   |
+                                                                                        |\    /|                      |  | (  ) |  |
+                                                                                        | \  / |                      |  | (  ) |  |
+                                                                                        |  \/  |                 /\   |  |      |  |   /\
+                                                                                        |  /\  |                /  \  |  |      |  |  /  \
+                                                                                        | /  \ |               |----| |  |      |  | |----|
+                                                                                        |/    \|---------------|    | | /|   .  |\ | |    |
+                                                                                        |\    /|               |    | /  |   .  |  \ |    |
+                                                                                        | \  / |               |    /    |   .  |    \    |
+                                                                                        |  \/  |               |  /      |   .  |      \  |
+                                                                                        |  /\  |---------------|/        |   .  |        \|
+                                                                                        | /  \ |               /   &*%#  |   .  | &*%#    \
+                                                                                        |/    \|              (          |      |          )
+                                                                                        |\    /|               |    | |--|      |--| |    |
+                                                                                        | \  / |----------------/  \-----/  \/  \-----/-- 
+                                                                                        |  \/  |                \\//     \\//\\//     \\// 
+                                                                                        |/\/\/\|                 \/       \/  \/       \/  
+                                                                                 _ .  .__  _ _. _ .____ _. .  ._ .  .___. .  ._ .  .__  _. __. _ . .  ._ 
+                                                                         .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  ._.
+                                                                         ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  
+                                                                  .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _ 
+                                                              ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                             .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  .___ _._
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+                                                          .__ _. .  ._ .  .___._ _. .  ._  .____ _. .  ._ .  .____ . .  ._ .  .____ _. . .  ._ .  .____ _. 
+                                                          ___ _. .  ._ .  .____ _. .  ._ .  .__.__ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____
+                        _______________           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._     /            /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+ _. .  ._ .  .__._    /____________/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
+"
+Write-host "We are in"
+
+
+Start-Sleep -s 2
+
+Write-host "
+ pssss, Jeff, go swipe the ID Card on that sensor so we can get into that room.  
+                    _________________________   
+                  \||||||||||||||||||________\
+                  \||[]||||||||||||||_ 0 0 0__\
+                  \||--||||||||||||||_ % % %___\
+                  \||||||||||||||||||_ ʌ ʌ ʌ____|
+               "
+               
+               
+Start-Sleep -s 3               
+ Write-host "   _  _
+               |    |
+               |    |
+               |    |
+               |    |
+               |    |
+               |    |     
+               !____!      
+               
+               "
+Start-Sleep -s 1               
+Write-host "               
+                  __  =====
+                  |{===/
+                  |{==/
+                  |
+                  |
+                  |
+                _  _
+               |    |
+               |    |
+               |    |
+               |    |
+               |    |
+               |    |     
+               !____!      
+               
+               "
+ Start-Sleep -s 1
+Write-host "                 
+                  __  =====
+                  |{===/
+                  |{==/
+                _ |_
+               |  | |
+               |  | |
+               |    |
+               |    |
+               |    |
+               |    |     
+               !____!      
+
+               "
+Write-host " Access denied" -ForegroundColor red
+            [Console]::Beep(90,1000)
+            Start-Sleep -s 3
+            cls
+            Write-host "It says a password is required"
+            Start-Sleep -s 2
+           
+
+
+            Do {
+            cls
+                $Passguess = Read-host "Whats the Password Guys?" 
+
+                 If ($Passguess -eq "4566")
+                 {
+                 Write-host " Access granted" -ForegroundColor green
+                 Write-host "
+
+                    _________________________   
+                  \|||||            |________\
+                  \||[]|            |_________\
+                  \||--|            |__________\
+                  \|||||            |___________|
+                
+                 "
+                 $Carter = "notcool"
+                 Start-Sleep -s 3
+                 
+                 }
+ 
+                 Else
+                 {
+                 Write-host " Access denied" -ForegroundColor red
+                 Start-Sleep -s 3
+                 }
+           
+                 }
+                 Until ($Carter -eq "notcool")
+  cls
+  Write-host "Wow this is crazy whats happening?"
+  Start-Sleep -s 3
+  cls
+  Write-host "we are in space"
+  Start-Sleep -s 3
+  cls
+  write-host "Where are we going?"
+  Read-Host "
+           
+          ________________________
+         /                        \
+        /          G| \*\          \                  
+        |         { ' _}2\         |
+        |         * {T_}/          |
+        |                          |
+        |                          |
+        |                          |
+        \     000                  /
+         \____%%%________________ /
+              ^^^
+         
+         
+         
+         
+         "
+ Start-Sleep -s 3 
+ 
+ Read-host "I think we are going into a worm hole..."
+ 
+ cls 
+
+ Write-host "The end" -ForegroundColor Black
+
+ Start-Sleep -s 6
+
+ Write-host "Special thanks to: Troy, Jeff, ASCII ART STUDIO, and the class of G2T" -ForegroundColor Black
+
+ Start-Sleep -s 3 
+
+ cls 
+
+ Write-host "Fate of Jeff 2 is on its way" -ForegroundColor 
+
+ Start-Sleep -s 3 
+
+
+                         
+[Console]::Beep(1000,500)
+[Console]::Beep(500,500)
+[Console]::Beep(500,500)
+[Console]::Beep(500,500)
+[Console]::Beep(750,500)
+[Console]::Beep(1000,500)
+[Console]::Beep(750,500)
+[Console]::Beep(500,500)
+
+
+Start-Sleep -s 3 
+
+Stop-Process -name powershell_ise   
+
+
+
+
+    }                          
+                      Else
+                                          {
+                                            Write-host "So you dont want to play? Your loss"
+                                          }
+     
+ 
