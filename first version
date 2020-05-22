@@ -1,7 +1,7 @@
 cls
 $balance = 500
 $bluprints = "False"
-$Weapon = "False"
+$weapon = "False"
 $Knife = "False"
 $drill = "False"
 $Id = "False"
@@ -199,12 +199,27 @@ Write-host "    Welcome!" -ForegroundColor cyan
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     ElseIf ($answera -eq "Jeff")
     {
     cls
     read-Host "The story contuines with Jeff, A citezen thought to have died 5 years ago. Jeff's real identity is unknowed and he has been hiding in secret for years, and is apart of the intense moscow mofia"                  
     Do
     {
+
    cls
   $maxchoices = Read-host "What would you like to do. Crime?(C) Check inventory?(I) Check bank?(B) Shop?(S)"  
 
@@ -533,7 +548,7 @@ else
     $balance = $balance + 500
            Write-host "$ $balance" -ForegroundColor Yellow
            Write-host "You made it out safe"  
-   }
+   }  
 }
        }
 
@@ -548,7 +563,7 @@ Write-host "Give me all your money!"
 Start-sleep -s 2
 
 
-If ($wepond -eq "True")
+If ($weapon -eq "True")
 {
 Read-host "
 
@@ -567,9 +582,13 @@ Write-host "Here take it -Gas station lady"
 Start-sleep -s 2
 $balance = $balance + 200
 Write-host "$ $balance" -ForegroundColor Yellow
-Write-host "You made it out safe"  
+Start-sleep -s 2
+cls
+Write-host "You made it out safe"
+Start-sleep -s 2  
 }
-ElseIf ($knife -eq "True")
+
+ElseIf ( $weapon -eq "False" -and $knife -eq "True")
 {
 
 Read-host "
@@ -588,8 +607,11 @@ Write-host "Here take it -Gas station lady "
 $balance = $balance + 50
 Write-host "$ $balance" -ForegroundColor Yellow
 Start-sleep -s 2
-Write-host "You made it out safe"  
+cls
+Write-host "You made it out safe"
+Start-sleep -s 2  
 }
+
 Else
 {
 read-host "
@@ -666,6 +688,9 @@ write-host  "
 
 
      " 
+
+     Start-Sleep -s 3
+     cls
      
     $jeffsrobbery = read-host  "Let's make this quick"
 
@@ -695,7 +720,7 @@ write-host  "
 |;____________/%%%%%%%%%%%%%%%%%\____________;|
 "
 
-Write-host "After Mike, the bruiser of the gang breaks open the door you finally get inside and only to realize a silent alarm was triggered on entry, Be quick or you wont make out in time. You see a serious of rooms on the first floor"
+Write-host "After Mike, the bruiser of the gang breaks open the door you finally get inside and only to realize a silent alarm was triggered on entry, be quick or you wont make out in time. You see a serious of rooms on the first floor"
 $Roomchoice = read-host "Where would you like to go first? keep in mind time is already running out. Office(O), Livingroom(L), Kitchen(K)" 
    
    If ($Roomchoice -eq "O")
@@ -870,7 +895,7 @@ ____________________________________________________\\
   {
   
   cls 
-If ($Weapond -eq "true")
+If ($weapon -eq "true")
 {
 
 
@@ -1023,9 +1048,14 @@ read-host "..."
   
   }
 
-  ElseIf ($maxchoices -eq "S")
-  {
   
+
+
+  
+ElseIf ($maxchoices -eq "S")
+  {
+
+
   cls
 
 Write-host "
@@ -1049,6 +1079,24 @@ $blacketmarketchoice = Read-host "
 We got a gun or a drill? (G/D) "
 cls
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 If ($blacketmarketchoice -eq "D")
 {
 $drillpurchasequestion = Read-host "
@@ -1056,49 +1104,60 @@ $drillpurchasequestion = Read-host "
 You want a drill for $ 500? (Y/N)"
 If ($drillpurchasequestion -eq "Y")
 {
- If ($balance -gt 500)
+ If ($balance -ge 500)
     {
      
      $balance = $balance - $drillpurchase
      Write-host "
 Drill purchased" -ForegroundColor Magenta 
-     $Drill = "True"
+     $drill = "True"
+     Start-Sleep -s 2
+
     }
           else
           {
            Write-host "Not enough money"
-           }
-    }
-    }
+           Start-Sleep -s 2
+          }
+}
+    Else
+{
+Start-Sleep -s 2
+cls
+Write-host "Come back if you change your mind" 
+Start-Sleep -s 2
+}
+}
 
-    If ($blacketmarketchoice -eq "G")
+
+
+
+
+
+
+
+
+    ElseIf ($blacketmarketchoice -eq "G")
 {
 $Gunpurchasequestion = Read-host "
 
 You want a gun for $ 500? (Y/N)"
 If ($Gunpurchasequestion -eq "Y")
 {
- If ($balance -gt 500)
+ If ($balance -ge 500)
     {
      
      $balance = $balance - $Gunpurchase
      Write-host "
 Gun purchased" -ForegroundColor Magenta 
      $weapon = "True"
+     Start-Sleep -s 2
     }
-          else
+          Else
           {
            Write-host "Not enough money"
-           }
-    }
-Else
-{
-Start-Sleep -s 2
-cls
-Write-host "Come back if you change your mind" 
-Start-Sleep -s 2
-}
-
+           Start-Sleep -s 2
+          }
 }
 Else
 {
@@ -1106,18 +1165,33 @@ Start-Sleep -s 2
 cls
 Write-host "Come back if you change your mind" 
 Start-Sleep -s 2
+}
+}
+
+
+Else
+{
+Start-Sleep -s 2
+cls
+Write-host "Come back if you change your mind" 
+Start-Sleep -s 2
 
 }
-  
-  }
+}
+
+
+
+
+
+
+
   
   ElseIf ($maxchoices -eq "B") 
 
   {
   cls
-  Start-Sleep -s 2
   write-host "$ $balance" -ForegroundColor Yellow
-  Start-Sleep -s 2
+  Start-Sleep -s 3
   }
 
   Else
@@ -1131,7 +1205,7 @@ Start-Sleep -s 2
   }
     }
     
-    Until($Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $Gun -eq "True")
+    Until($Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $weapon -eq "True")
 
 
 
@@ -1179,10 +1253,6 @@ Start-Sleep -s 2
 
 
  After all these years, here we are boys...
-
-
-
-
 
  "
  Start-Sleep -s 3
@@ -1437,6 +1507,7 @@ Write-host "We are in"
 
 
 Start-Sleep -s 2
+cls
 
 Write-host "
  pssss, Jeff, go swipe the ID Card on that sensor so we can get into that room.  
@@ -1459,7 +1530,8 @@ Start-Sleep -s 3
                !____!      
                
                "
-Start-Sleep -s 1               
+Start-Sleep -s 1 
+cls              
 Write-host "               
                   __  =====
                   |{===/
@@ -1478,6 +1550,7 @@ Write-host "
                
                "
  Start-Sleep -s 1
+ cls
 Write-host "                 
                   __  =====
                   |{===/
@@ -1562,7 +1635,7 @@ Write-host " Access denied" -ForegroundColor red
  
  cls 
 
- Write-host "The end" -ForegroundColor Black
+ Write-host " The end " -ForegroundColor Black
 
  Start-Sleep -s 6
 
