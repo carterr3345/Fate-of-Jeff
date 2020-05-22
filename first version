@@ -4,9 +4,11 @@ $bluprints = "False"
 $weapon = "False"
 $Knife = "False"
 $drill = "False"
+$Binoculars = "False"
 $Id = "False"
 $var5 = "False"
 $drillpurchase = 500
+$binocularpurchase = 500
 $gunpurchase = 500
 $carter = "cool"
 cls 
@@ -59,7 +61,7 @@ Write-host "    Welcome!" -ForegroundColor cyan
        {
        cls
 
-       $troysfirstq = read-host "Would you like to do this afternoon, Go look at the stars or talk with girlfriend (S/G)? 
+       $troysfirstq = read-host "Would you like to do this afternoon, go look at the stars or talk with girlfriend (S/G)? 
 
  *    .  *       .   ,          *
            .       . .        *
@@ -160,7 +162,7 @@ Write-host "    Welcome!" -ForegroundColor cyan
   write-host "ZZZzzzZZZzzz"
    start-sleep -s 1
    cls
-   write-host "Oh no! my Celestron CPC 1100 StarBright XLT GPS Schmidt Cassegrain 2800mm Telescope detected a incoming radiowave from that ship."
+   write-host "Oh no! my Celestron CPC 1100 StarBright XLT GPS Schmidt Cassegrain 2800mm Telescope detected a incoming signal from that ship."
     start-sleep -s 1
     read-host "ZZZzzz4566zzzZZZ"
     start-sleep -s 5 
@@ -169,6 +171,8 @@ Write-host "    Welcome!" -ForegroundColor cyan
       
     Else
     {
+    start-sleep -s 2
+    cls
     read-host "
     
                 
@@ -720,8 +724,14 @@ write-host  "
 |;____________/%%%%%%%%%%%%%%%%%\____________;|
 "
 
-Write-host "After Mike, the bruiser of the gang breaks open the door you finally get inside and only to realize a silent alarm was triggered on entry, be quick or you wont make out in time. You see a serious of rooms on the first floor"
-$Roomchoice = read-host "Where would you like to go first? keep in mind time is already running out. Office(O), Livingroom(L), Kitchen(K)" 
+Write-host "After Mike, the bruiser of the gang breaks open the door you finally get inside and only to realize a silent alarm was triggered on entry, be quick or you wont make out in time. You see a serious of rooms on the first floor.
+
+"
+$Roomchoice = read-host "
+
+Where would you like to go first? keep in mind time is already running out.
+
+Office(O), Livingroom(L), Kitchen(K)" 
    
    If ($Roomchoice -eq "O")
    {
@@ -757,11 +767,13 @@ $Roomchoice = read-host "Where would you like to go first? keep in mind time is 
   
   
    "
-   $Filingcabinet = Read-Host "you see a filing cabinet in the office, would you like to search? (Y/N)"
+   $Filingcabinet = Read-Host "You see a filing cabinet in the office, would you like to search? (Y/N)"
    
    If ($Filingcabinet -eq "Y")
    {
-   write-host "Congratulations! You found secret Goverment Blueprints" -ForegroundColor Magenta
+   write-host "
+   
+   Congratulations! You found secret Goverment Blueprints" -ForegroundColor Magenta
    $Blueprints = "True"
    start-sleep -s 4
    }
@@ -827,7 +839,9 @@ ____________________________________________________\\
     $Grabknife = Read-host "Would you like to grab a knife? (Y/N)?"
      If ($Grabknife -eq "Y")
    {
-   Write-Host "Congratulations! You found a knife" -ForegroundColor Magenta
+   Write-Host "
+   
+   Congratulations! You found a knife" -ForegroundColor Magenta
    $Knife = "True"
    start-sleep -s 4
    }
@@ -857,7 +871,9 @@ ____________________________________________________\\
     $serchcouch = Read-host "Would you like to search the couch? (Y/N)?"
      If ($serchcouch -eq "Y")
    {
-   write-host "Congratulations! You found someones ID card" -ForegroundColor Magenta
+   write-host "
+
+   Congratulations! You found someones ID card" -ForegroundColor Magenta
    $Id = "True"
    start-sleep -s 2
    }
@@ -866,17 +882,8 @@ ____________________________________________________\\
    Start-Sleep -s 3
    cls
    }
-
-
    }
-   
-   
-   
-   
-  
-  
-   
-    }
+   }
      
     Else
     {
@@ -967,6 +974,42 @@ Else
 {
 
 }
+
+
+
+If ($Binoculars -eq "true")
+{
+ write-host "
+
+
+
+ 
+  /----\ /----\
+  |    | |    |
+  |    |_|    |
+  /     +     \
+ |    |---|    |  
+ |    |   |    |
+ |    |   |    |
+ |    |   |    |
+ \----/   \----/
+
+
+
+
+ (Binoculars)
+
+"
+}
+
+Else
+{
+
+}
+
+
+
+
 
 If ($drill -eq "true")
 { write-host "
@@ -1076,25 +1119,8 @@ What you looking at buying?"
 Start-Sleep -s 2
 $blacketmarketchoice = Read-host "
 
-We got a gun or a drill? (G/D) "
+We got a gun, binoculars and a drill? (G/B/D) "
 cls
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 If ($blacketmarketchoice -eq "D")
@@ -1129,12 +1155,36 @@ Start-Sleep -s 2
 }
 }
 
+    ElseIf ($blacketmarketchoice -eq "B")
+{
+$Binocularpurchasequestion = Read-host "
 
-
-
-
-
-
+You want Binoculars for $ 500? (Y/N)"
+If ($Binocularpurchasequestion -eq "Y")
+{
+ If ($balance -ge 500)
+    {
+     
+     $balance = $balance - $binocularpurchase
+     Write-host "
+Binoculars purchased" -ForegroundColor Magenta 
+     $Binoculars = "True"
+     Start-Sleep -s 2
+    }
+          Else
+          {
+           Write-host "Not enough money"
+           Start-Sleep -s 2
+          }
+}
+Else
+{
+Start-Sleep -s 2
+cls
+Write-host "Come back if you change your mind" 
+Start-Sleep -s 2
+}
+}
 
 
     ElseIf ($blacketmarketchoice -eq "G")
@@ -1180,11 +1230,6 @@ Start-Sleep -s 2
 }
 
 
-
-
-
-
-
   
   ElseIf ($maxchoices -eq "B") 
 
@@ -1205,7 +1250,7 @@ Start-Sleep -s 2
   }
     }
     
-    Until($Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $weapon -eq "True")
+    Until($Binoculars -eq "True" -and $Blueprints -eq "True" -and $drill -eq "True" -and $Id -eq "True" -and $weapon -eq "True")
 
 
 
@@ -1258,7 +1303,7 @@ Start-Sleep -s 2
  Start-Sleep -s 3
  write-host "How accurate are those blueprints Jeff? -Martan"
  Start-Sleep -s 1
- read-host "200%, The weekest point is under the north orbital maneuvering engine We will strike at midnight, Hey marco pass the binoculars "
+ read-host "200%, The weekest point is under the north orbital maneuvering engine, we will strike at midnight, Hey marco pass the binoculars "
  Start-Sleep -s 1
  write-host "sure thing jeff"
  Start-Sleep -s 3
@@ -1290,8 +1335,9 @@ Start-Sleep -s 2
 
  "
  read-host "Thats it alright..... "
-  Start-Sleep -s 10
-  write-host "
+ Start-Sleep -s 10
+ cls
+ write-host "
   
                                                                                          /\/\/\                            /  \
                                                                                         | \  / |                         /      \
@@ -1369,7 +1415,6 @@ Start-Sleep -s 2
 Start-Sleep -s 2
  cls
   write-host "
- 
                                                                                          /\/\/\                            /  \
                                                                                         | \  / |                         /      \
                                                                                         |  \/  |                       /          \
@@ -1404,17 +1449,10 @@ Start-Sleep -s 2
                         _______________           ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .___ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
  _. .  ._ .  .__._     /            /  \     .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
  _. .  ._ .  ._.__    /____________/    \  _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ _. .  ._ .  .____ 
-
  "
  Start-Sleep -s 2
  cls
   write-host " 
-
-
-
-
-
- 
                                                                                          /\/\/\                            /  \
                                                                                         | \  / |                         /      \
                                                                                         |  \/  |                       /          \
@@ -1519,7 +1557,8 @@ Write-host "
                "
                
                
-Start-Sleep -s 3               
+Start-Sleep -s 3
+cls              
  Write-host "   _  _
                |    |
                |    |
@@ -1635,7 +1674,7 @@ Write-host " Access denied" -ForegroundColor red
  
  cls 
 
- Write-host " The end " -ForegroundColor Black
+ Write-host "The end" -ForegroundColor Black
 
  Start-Sleep -s 6
 
@@ -1645,9 +1684,9 @@ Write-host " Access denied" -ForegroundColor red
 
  cls 
 
- Write-host "Fate of Jeff 2 is on its way" -ForegroundColor 
+ Write-host "Fate of Jeff 2 is on its way" -ForegroundColor Green 
 
- Start-Sleep -s 3 
+ Start-Sleep -s 10 
 
 
                          
