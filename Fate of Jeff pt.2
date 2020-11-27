@@ -1,0 +1,35 @@
+#Fate of Jeff 2 is on its ways hehe, haha
+
+cls
+
+$shots = 1
+$Carter = 1
+
+
+Do { 
+
+Start-Sleep -Seconds 1
+cls
+
+write-host "
+
+
+
+
+>                      <
+"
+
+$isDown = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::LeftShift)
+
+If($isDown)
+
+{
+$Carter = 2
+Read-Host "Shots fired"
+}
+
+Else{}
+
+} Until ($Carter -eq 2)
+
+write-host "Hello world"
