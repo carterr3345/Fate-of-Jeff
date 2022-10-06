@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct  5 09:51:53 2022
@@ -7,7 +8,51 @@ Created on Wed Oct  5 09:51:53 2022
 
 import os
 from time import sleep
+id = "false"
+gun = "false"
+map = "false"
+knife = "false"
+drill = "false"
+
+
 game = "on"
+
+##inventory
+ainventory = ["knife"]
+
+print(ainventory)
+
+#function for updating inventory array
+if (gun == "true"):
+    if "gun" not in ainventory:
+        ainventory.append("gun") 
+        
+if (knife == "true"):
+    if "knife" not in ainventory:
+        ainventory.append("knife")
+        
+if (map == "true"):
+    if "map" not in ainventory:
+        ainventory.append("map")
+        
+if (id == "true"):
+    if "id" not in ainventory:
+        ainventory.append("id")
+
+if (drill == "true"):
+    if "drill" not in ainventory:
+        ainventory.append("drill")
+    
+#n1.remove("b")
+#n1.ammend("b")
+
+print(ainventory)
+##
+
+
+
+
+
 
 floor = int(input("Which floor would you like to go down to? "))
 
@@ -32,10 +77,12 @@ function interface
         match interfaceinput :  
             case "t"
                 travelPath = input(float((roomDiscription, "Would you like to travel North(n) South(s) East(s) West(w) Up(u) Down(d)?")))
-                
             case "i"
-            
+                print(inventory)
             case "s"
+
+
+
 
 
 
