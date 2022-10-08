@@ -1,35 +1,1334 @@
-#Fate of Jeff 2 is on its ways hehe, haha
+
+$location = "Commandroom"
+$ventsare = "Closed"
+$rearventsare = "Closed"
+$power = "On"
+$powergrid = "Off"
+$Turbinecut = "False"
+$spacesuit = "Off"
+$gravity = "On"
+$Inventory = "0"
+$spacefinished = "not done"
+$weapon = "False"
+$Blueprints = "False"
+$Binoculars = "False"
+$drill = "False"
+$Knife = "False"
+$Id = "False"
+$Spacesuit = "False"
+
+cls 
+
+
+do {
 
 cls
 
-$shots = 1
-$Carter = 1
+$controls = read-host "You are in the $location, Would you like to move, check inventory, or search current room? (m/c/s)"
 
 
-Do { 
-
-Start-Sleep -Seconds 1
-cls
-
-write-host "
+function location-checknorth {
 
 
-
-
->                      <
-"
-
-$isDown = [Windows.Input.Keyboard]::IsKeyDown([System.Windows.Input.Key]::LeftShift)
-
-If($isDown)
-
+If ($location -eq "Cockpit")
 {
-$Carter = 2
-Read-Host "Shots fired"
+cls
+write-host "Invalid entry" 
 }
 
-Else{}
+ElseIf ($location -eq "Halls")
+{
+c
+cls
+Clear-Variable -Name "location"
+$script:location = "Cockpit"
+cls
+start-sleep -s 2 
+}
 
-} Until ($Carter -eq 2)
 
-write-host "Hello world"
+ElseIf ($location -eq "Commandroom")
+{
+cls
+Clear-Variable -Name "location"
+$script:location = "Halls"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Leftwing")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Rightwing")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Engines")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Commandroom"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Weapons")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Centralvents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Uppervents"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Uppervents")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Lowervents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Centralvents"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Rearvents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Lowervents"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Eastrearvents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Mechanics")
+{
+Clear-Variable -Name "Location"
+$script:location = "Eastrearvents"
+cls
+start-sleep -s 2 
+}
+
+Else {}
+
+}
+
+function location-checkwest {
+
+
+If ($location -eq "Cockpit")
+{
+cls
+write-host "Invalid entry" 
+}
+
+ElseIf ($location -eq "Halls")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Commandroom")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Leftwing"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Leftwing")
+{
+If ($ventsare -eq "Open")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Centralvents"
+cls
+start-sleep -s 2 
+}
+else 
+{
+cls
+write-host "Invalid entry"
+}
+}
+
+ElseIf ($location -eq "Rightwing")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Commandroom"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Engines")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Weapons")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Engines"
+cls
+}
+
+ElseIf ($location -eq "Centralvents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Uppervents")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Lowervents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Rearvents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Eastrearvents")
+{
+
+If ($power -eq "Off"){
+write-host "There is a security trap door in the vent that can only be opened when connected to power."
+Start-sleep -s 2
+}
+
+Else { 
+
+$openrearvents = read-host "There is a security trap door in the vents, would you like to open it? (Y/N)"
+
+If ($openrearvents -eq "Y")
+{ $script:location = "Rearvents"
+start-sleep -s -2 }
+
+Else {
+write-host "You stayed in Eastrearvents"
+start-sleep -s 1}
+}
+
+
+
+
+}
+
+ElseIf ($location -eq "Mechanics")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Eastrearvents"
+cls
+start-sleep -s 2 
+}
+
+Else {}
+
+}
+
+function location-checkeast {
+
+If ($location -eq "Cockpit")
+{
+cls
+write-host "Invalid entry" 
+}
+
+ElseIf ($location -eq "Halls")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Commandroom")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Rightwing"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Leftwing")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Commandroom"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Rightwing")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Engines")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Weapons"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Weapons")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Centralvents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Leftwing"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Uppervents")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Lowervents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Rearvents")
+{
+
+If ($power -eq "Off"){
+write-host "There is a security trap door in the vent that can only be opened when connected to power."
+Start-sleep -s 2
+}
+
+Else { 
+
+$openeastrearvents = read-host "There is a security trap door in the vents, would you like to open it? (Y/N)"
+
+If ($openeastrearvents -eq "Y")
+{ $script:location = "Eastrearvents"
+start-sleep -s -2 }
+
+Else {
+write-host "You stayed in Rearvents"
+start-sleep -s 1}
+}
+
+}
+
+
+ElseIf ($location -eq "Eastrearvents")
+{
+
+
+
+}
+
+ElseIf ($location -eq "Mechanics")
+{cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+}
+
+function location-checksouth {
+
+If ($location -eq "Cockpit")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Halls"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Halls")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Commandroom"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Commandroom")
+{
+cls
+Clear-Variable -Name "Location"
+$script:location = "Engines"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Leftwing")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Rightwing")
+{
+cls
+write-host "Invalid entry"
+}
+
+
+ElseIf ($location -eq "Engines")
+{
+cls
+write-host "Invalid entry" 
+}
+
+
+ElseIf ($location -eq "Weapons")
+{
+cls
+write-host "Invalid entry"
+}
+
+ElseIf ($location -eq "Centralvents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Lowervents"
+cls
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Uppervents")
+{
+Clear-Variable -Name "Location"
+$script:location = "Centralvents"
+cls
+start-sleep -s 2 
+}
+
+
+ElseIf ($location -eq "Lowervents")
+{
+If ($turbinecut -eq "true") 
+{
+Clear-Variable -Name "Location"
+$script:location = "Rearvents"
+cls
+start-sleep -s 2 
+} 
+Else 
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2
+} 
+}
+
+ElseIf ($location -eq "Rearvents")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+ElseIf ($location -eq "Eastrearvents")
+{
+
+If ($script:rearventsare -eq "open")
+{
+Clear-Variable -Name "Location"
+$script:location = "Mechanics"
+cls
+start-sleep -s 2
+}
+Else {
+write-host "Invalid entry"
+start-sleep -s 2
+}
+}
+
+ElseIf ($location -eq "Mechanics")
+{
+cls
+write-host "Invalid entry"
+start-sleep -s 2 
+}
+
+Else {}
+
+}
+
+
+
+
+If ($controls -eq "m")
+{
+
+cls 
+
+$shipchoice = read-host "You are in the $location, where you like to move? (n=north s=south e=east w=west)"
+
+Switch ($shipchoice)
+{
+  n { location-checknorth }
+  e { location-checkeast }
+  s { location-checksouth }
+  w { location-checkwest }
+  Default {$shipchoice = read-host "you must pick w, e, s, n"}
+}
+}
+
+If ($controls -eq "c")
+{
+ cls 
+
+If ($weapon -eq "true")
+{
+
+
+
+ write-host "
+ 
+    
+   +--^----------,--------,-----,--------^-,
+   | |||||||||   `--------'     |          O
+   `+---------------------------^----------|
+     `\_,---------,---------,--------------'
+       / XXXXXX /'|       /'
+      / XXXXXX /  `\    /'
+     / XXXXXX /`-------'
+    / XXXXXX /
+   / XXXXXX /
+  (________(                
+   `------'  
+    
+  (Gun)
+
+
+    "
+
+
+
+}
+
+Else
+{
+
+}
+
+If ($Blueprints -eq "true")
+{
+ write-host "
+
+
+  .-=~=-.                                                                 .-=~=-.
+  (__  _)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(__  _)
+  ( _ __)                                                                 ( _ __)
+  (__  _)              |PROJECT КOCMOC|                                   (__  _)
+  (_ ___)               --------------                                    (_ ___)
+  (__  _)                                                                 (__  _)
+  ( _ __)            _   _                        ~~                      ( _ __)
+  (__  _)         .-( '.' )-.                     '.   ~                  (__  _)
+  (_ ___)        (   \ : /   )                                            (_ ___)
+  (__  _)       ( ''-.;;;.-'' )                                           (__  _)
+  ( _ __)      ( :-==;;;;;==-: )                                          ( _ __)
+  (__  _)       (  .-';;;'-.  )                                           (__  _)
+  (_ ___)        ('  / : \  ')                   3x12pldd5 engine         (_ ___)
+  (__  _)         '-(_.'._)-'                    ________                 (__  _)
+  ( _ __)        fuison reactor                 /========\                ( _ __)
+  (__  _)                                    __/__________\               (__  _)
+  (_ ___)                                   /              \              (_ ___)
+  (__  _)       ____________               /  =(*)=         \             (__  _)
+  ( _ __)      (__((__((___()             |_._._._._._._._._.|            ( _ __)
+  (__  _)     (__((__((___()()            / __________________ \          (__  _)
+  ( _ __)    (__((__((___()()()          | OOOOOOOOOOOOOOOOOOO0 |         ( _ __)
+  (__  _)                                                                 (__  _)
+  (_ ___)-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-=-._.-(_ ___)
+  '-._.-'                                                                 '-._.-'
+
+  (Blue Prints)
+
+"
+}
+
+Else
+{
+
+}
+
+If ($Binoculars -eq "true")
+{
+ write-host "
+
+
+
+ 
+  /----\ /----\
+  |    | |    |
+  |    |_|    |
+  /     +     \
+ |    |---|    |  
+ |    |   |    |
+ |    |   |    |
+ |    |   |    |
+ \----/   \----/
+
+
+
+
+ (Binoculars)
+
+"
+}
+
+Else
+{
+
+}
+
+If ($drill -eq "true")
+{ write-host "
+
+
+       _____________
+ -----| | | |       |
+       \|_|_|___    |
+                |   |
+                |   |
+                |   |
+            ___/    |
+           |________| 
+
+   (Drill) 
+
+
+" 
+}
+
+Else
+{
+
+}
+
+If ($Knife -eq "true")
+{ write-host "
+
+
+ ___________________________________ ______________________
+ \                                  | (_)     (_)    (_)   \
+  `.                                |  __________________   }
+    `-..........................____|_(                  )_/
+
+ 
+   (Knife) 
+
+
+" 
+}
+
+Else
+{
+}
+
+If ($Id -eq "true")
+{
+
+ write-host "
+    _________________________________________________
+   !          !                                      !
+   ! ///-\\\  !           КOCMOC Лицензия            !
+   ! |^   ^|  !  имя:Luis_Bykov                      !
+   ! |O   O|  !  Цвет волос:коричневый               !
+   ! |  '  |  !  возраст:тридцать                    !
+   !  \ _ /   !  Высота: сто семьдесят три           !
+   !   | |    !  Цвет глаз:синий                     !
+   !          !  Департамент:безопасности советник   !
+   !          !  Лицензия# PRNDSL1234OD              !
+   !_________________________________________________!
+                   
+ 
+   (ID) 
+
+
+" 
+
+}
+
+If ($spacesuit -eq "On") 
+{
+
+ write-host ""
+
+        .-"""-.       
+       /= ___ =\       
+      |- /|_|\ -|     
+      |={]0 0[}=|     
+      \__\___/__/     
+       {_______}_      
+     /` *        `\ 
+    /= .     []   =\    
+   /  /|ooo    |\   \ 
+  (   )\_______/(   )    
+   \``\/       \/``/ 
+    `-| ==   -  |-`   
+      |  - _  - |     
+      \ - / \ - /     
+      |-_ | | _-|     
+      \ __| |___/     
+      {___} {___}     
+     (____) (____)
+ 
+     (Space suit) "
+
+ }
+
+Else 
+{
+}
+
+read-host "."
+}
+
+
+
+ElseIf ($controls -eq "s")
+{
+
+Switch ($Location)
+{
+  Cockpit { search-cockpit }
+  Halls {search-halls}
+  Commandroom { search-commandroom }
+  Leftwing { search-leftwing }
+  Rightwing { search-rightwing }
+  Engines { search-engines }
+  Weapons { search-weaponS }
+  Uppervents{ search-Uppervents} 
+  Centralvents { search-Centralvents}
+  Lowervents { search-Lowervents } 
+  Rearvents { search-Rearvents}
+  Eastrearvents { search-Eastrearvents}
+  Mechaincs { search-Mechanics}
+  Default { write-host "you cannot search here"}
+}
+
+}
+        
+function search-commandroom {
+
+If ($power -eq "On") {
+
+$navmap = read-host "you found a navigation table, would you like to turn on? (Y/N)"
+
+If ($navmap -eq "Y")
+{
+read-host "
+
+     
+
+
+                     _________
+                    |         |
+                    | Cockpit |
+                    |_________|
+
+                      |     |
+                      |     |
+                      |     |                
+                      |Halls|
+                      |     |
+                      |     | 
+       _________   _____________   _____________
+      |           |             | |             |
+      :Left Wing|-| Command room|-|  Right wing |
+      |_________| |_____________| |_____________|  
+
+                         |
+                   _____________   _____________
+                  |             | |             |
+                  |   Engines   |-|   Weapons   :
+                  |_____________| |_____________|  
+    
+
+    
+    
+   
+    
+    "
+}
+
+Else {}
+}
+
+Else {
+write-host "Holomap does not have power"
+start-sleep -s 2
+}
+
+}
+
+function search-weapons {
+
+
+
+
+$gearpickup = read-host "You found your old gear!, would you like to pick up? (Y/N)" 
+
+If ($gearpickup -eq "Y")
+{
+
+write-host "Gear picked up"
+
+Start-Sleep -s 2
+
+$script:bluprints = "True"
+$script:weapon = "True"
+$script:Knife = "True"
+$script:drill = "True"
+$script:Binoculars = "true"
+$script:Id = "True"
+
+}
+
+Else 
+
+{
+
+}
+
+}
+
+function search-leftwing {
+
+If ($ventsare -eq "Closed" )
+{
+
+
+
+If ($drill -eq "True") 
+{
+
+$ventquestion = read-host "There is a vent in the room, would you like to unscrew the cover and enter?"
+
+If ($ventquestion -eq "Y")
+{write-host "zz zz"
+Start-Sleep -s 2
+$script:ventsare = "Open"
+cls
+
+If ($spacesuit -eq "on")
+{write-host "You cannot fit into vents with a space suit on"
+start-sleep -s -2}
+
+Else 
+{write-host "You entered the vents"
+$script:location = "Centralvents"
+start-sleep -s 2}
+}
+
+
+Else 
+{ 
+write-host "Vents not entered"
+start-sleep -s 2
+}
+
+
+}
+
+
+Else {
+write-host "Room empty"
+start-sleep -s 2
+
+}
+
+
+
+}
+
+Else
+{
+
+$reentervents = read-host "The room is empty, would you like to enter the vents? (Y/N)"
+
+If ($reentervents -eq "Y") 
+{
+
+
+If ($spacesuit -eq "on")
+{
+write-host "You cannot fit into vents with a space suit on"
+start-sleep -s -2
+}
+
+Else 
+{
+write-host "You entered the vents"
+$script:location = "Centralvents"
+start-sleep -s 2
+}
+
+
+}
+
+Else {
+write-host "Vents not entered"
+
+}
+
+ 
+
+
+
+
+
+
+
+
+
+ }
+
+}
+
+function search-cockpit {
+
+
+If ($powergrid -eq "active")
+{
+
+
+
+
+If ($Power -eq "On")
+{
+$poweroffquestion = read-host "You found a control pannel, would you like to turn the ship powers power off? (Y/N)"
+If ($poweroffquestion -eq "Y")
+{
+Clear-Variable -Name "Power"
+$script:Power = "Off"
+start-sleep -s 1
+write-host "Power turned off"
+start-sleep -s 1
+}
+else{}
+}
+ElseIf ($Power -eq "Off")
+{
+$poweronquestion = read-host "You found a control pannel, would you like to turn the ship powers power on? (Y/N)"
+
+If ($poweronquestion -eq "Y")
+{
+Clear-Variable -Name "Power"
+$script:power = "On"
+start-sleep -s 1
+write-host "Power turned on"
+start-sleep -s 1
+}
+else{}
+}
+
+}
+
+Else {
+write-host "Room empty"
+start-sleep -s 2
+}
+}
+
+function search-halls {
+
+$windowquestion = read-host "There is a window, would you like to look out of it? (Y/N)"
+
+If ($windowquestion -eq "Y")
+{
+Read-host "
+
+
+          ________________________
+         /                        \
+        /          G| \*\          \                  
+        |         { ' _}2\         |
+        |         * {T_}/          |
+        |                          |
+        |                          |
+        |                          |
+        \       0                  /
+         \______%________________ /
+                ^
+         
+         
+         "}
+
+Else {
+write-host "window not observed"
+start-sleep -s 1
+cls
+}
+}
+
+function search-engines {
+write-host "Room empty"
+start-sleep -s 2
+}
+
+function search-rightwing {
+
+If ($gravity -eq "Off")
+{
+
+$spacehatchspacesuitquestion = Read-host "There is a space suit rack, and a hatch on the roof, what would you like to do? (S/H)"
+
+If ($spacehatchspacesuitquestion -eq "S") {
+If ($spacesuit -eq "Off") {
+
+$spacesuitonquestion = read-host "You found a space suit, would you like to put it on? (Y/N)"
+
+If ($spacesuitonquestion -eq "Y") {
+
+write-host "Space suit equipped"
+$script:spacesuit = "On"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Space suit not equipped"
+start-sleep -s 1
+cls
+}
+
+}
+
+Else 
+{
+
+$spacesuitoffquestion = read-host "Would you like to take your space suit off? (Y/N)"
+
+If ($spacesuitoffquestion -eq "Y") {
+
+write-host "Space suit unequipped"
+$script:spacesuit = "off"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Spacesuit not taken off"
+start-sleep -s 1
+cls
+}
+
+
+
+
+
+
+
+
+
+}
+
+}
+
+ElseIf ($spacehatchspacesuitquestion -eq "H")
+{
+$script:spacefinished = "done"
+}
+
+Else {
+write-host "done selected"
+}
+
+}
+
+Else {
+
+If ($spacesuit -eq "Off") {
+
+$spacesuitonquestion = read-host "You found a space suit, would you like to put it on? (Y/N)"
+
+If ($spacesuitonquestion -eq "Y") {
+
+write-host "Space suit equipped"
+$script:spacesuit = "On"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Space suit not equipped"
+start-sleep -s 1
+cls
+}
+
+}
+
+Else 
+{
+
+$spacesuitoffquestion = read-host "Would you like to take your space suit off? (Y/N)"
+
+If ($spacesuitoffquestion -eq "Y") {
+
+write-host "Space suit unequipped"
+$script:spacesuit = "off"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Spacesuit not taken off"
+start-sleep -s 1
+cls
+}
+
+
+
+}
+
+}
+
+}
+
+function search-Uppervents { 
+write-host "The room is empty, but you hear a loud turbine."
+start-sleep -s 2 cls
+}
+
+function search-centralvents { 
+write-host "Room empty"
+start-sleep -s 2 
+cls}
+
+function search-Lowervents {
+
+
+If ($Turbinecut -eq "true") 
+{
+$cutwalkthroughturbinequestion = Read-host "The power to the turbine has been cut, would you like to walk through? (Y/N)"
+
+If ($cutwalkthroughturbinequestion -eq "Y")
+
+{Start-Sleep -s 1
+$script:location = "Rearvents"
+start-sleep -s 2 
+}
+
+Else 
+{
+write-host "Rearvents not entered"
+}
+
+
+
+
+}
+
+Else {
+If ($Power -eq "Off") {
+
+$turbinequestion = read-host "Would you like to climb to the other side of the turbine (Y/N)"
+
+If ($turbinequestion -eq "Y") 
+
+{
+$script:location = "Rearvents"
+start-sleep -s 1
+write-host "Rear vents entered"
+start-sleep -s 2
+}
+
+Else {
+write-host "Rear vents not entered"}
+
+}
+
+
+Else {
+
+
+Write-host "There is a spinning turbine, if only you could find a way to get to the otherside..."
+start-sleep -s 2
+$script:powergrid = "Active"
+
+}
+
+
+
+
+
+
+
+}
+
+}
+
+function search-Rearvents {
+
+$turbinecutquestion = read-host "Would you like to cut the wires of the turbine with you knife? (Y/N)"
+
+If ($turbinecutquestion -eq "Y")
+{
+$script:Turbinecut = "true"
+start-sleep -s 1
+Write-host "Turbine cut"
+Start-Sleep -s 2
+cls
+}
+Else
+{Write-host "Turbine not cut"}
+}
+
+function search-Eastrearvents { 
+        
+If ($rearventsare -eq "Open") 
+{
+write-host "Vents empty"
+start-sleep -s 2
+}
+             
+Else {
+
+$Eastrearventsquestion = read-host "You found a vent cover, would you like to open it?"
+
+If ($Eastrearventsquestion -eq "Y")
+{
+Start-Sleep -s 1
+write-host "zz"
+$script:location = "Mechanics"
+$script:rearventsare = "open"
+cls
+write-host "vent cover opened"
+start-sleep -s 2
+}
+
+Else {
+write-host "vent cover not open"
+start-sleep -s 1
+}
+
+}
+
+ }
+
+function search-Mechanics {
+
+
+If ($gravity -eq "On") {
+
+
+
+
+$gravityoffquestion = read-host "You found a lever, would you like to switch off? (Y/N)"
+
+If ($gravityoffquestion -eq "Y") {
+
+write-host "Artifical gravity deactivated"
+$script:gravity = "Off"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Lever not moved"
+start-sleep -s 1
+cls
+}
+
+}
+
+Else 
+{
+
+$gravityonquestion = read-host "You found a lever, would you like to switch on? (Y/N)"
+
+If ($gravityonquestion -eq "Y") {
+
+write-host "Artifical gravity activated"
+$script:gravity = "On"
+start-sleep -s 2
+cls
+}
+
+Else {
+Write-host "Lever not moved"
+start-sleep -s 1
+cls
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+}
+
+
+} until ($spacefinished -eq "done")
